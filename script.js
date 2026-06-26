@@ -3,21 +3,21 @@
    Interactive JavaScript
    =========================== */
 
-   document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
 
     // ===========================
     // PRELOADER
     // ===========================
     const preloader = document.getElementById('preloader');
     const preloaderProgress = document.getElementById('preloaderProgress');
-    
+
     // Simulate loading progress
     let progress = 0;
     const interval = setInterval(() => {
         progress += Math.random() * 30;
         if (progress > 100) progress = 100;
         preloaderProgress.style.width = progress + '%';
-        
+
         if (progress === 100) {
             clearInterval(interval);
             setTimeout(() => {
@@ -34,7 +34,7 @@
     // SCROLL PROGRESS
     // ===========================
     const scrollProgress = document.getElementById('scrollProgress');
-    
+
     window.addEventListener('scroll', () => {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
@@ -90,7 +90,7 @@
             e.preventDefault();
             const targetId = this.getAttribute('href');
             if (targetId === '#') return;
-            
+
             const target = document.querySelector(targetId);
             if (target) {
                 const headerOffset = 80;
