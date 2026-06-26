@@ -15,11 +15,14 @@
     --mustard-glow: rgba(212, 160, 23, 0.15);
     --mustard-glow-strong: rgba(212, 160, 23, 0.3);
 
-    --white: #FFFFFF;
-    --white-off: #F5F5F0;
-    --white-muted: #C8C8C0;
-    --white-dim: #888880;
-    --white-ghost: rgba(255, 255, 255, 0.06);
+    --rose-bronze: #877875;
+    --rose-bronze-light: #C9A59E;
+    --rose-bronze-rgb: 135, 120, 117;
+    --white: #C9A59E;
+    --white-off: #B8A09C;
+    --white-muted: #9E8A86;
+    --white-dim: #877875;
+    --white-ghost: rgba(135, 120, 117, 0.06);
 
     /* Typography */
     --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -37,7 +40,7 @@
     --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 
     /* Borders & Shadows */
-    --border-subtle: 1px solid rgba(255, 255, 255, 0.08);
+    --border-subtle: 1px solid rgba(135, 120, 117, 0.08);
     --border-mustard: 1px solid rgba(212, 160, 23, 0.25);
     --shadow-glow: 0 0 40px rgba(212, 160, 23, 0.15);
 }
@@ -154,7 +157,7 @@ svg {
 }
 
 .preloader-text {
-    color: var(--white);
+    color: var(--rose-bronze-light);
 }
 
 .preloader-bar {
@@ -321,7 +324,7 @@ svg {
 .section-title {
     font-size: clamp(28px, 4vw, 32px);
     font-weight: 700;
-    color: var(--white);
+    color: var(--rose-bronze-light);
     letter-spacing: -0.01em;
 }
 
@@ -527,7 +530,7 @@ svg {
     font-family: var(--font-mono);
     font-size: 24px;
     font-weight: 600;
-    color: var(--white);
+    color: var(--rose-bronze-light);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -581,8 +584,8 @@ svg {
     inset: 0;
     background-size: 50px 50px;
     background-image:
-        linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+        linear-gradient(to right, rgba(135, 120, 117, 0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(135, 120, 117, 0.03) 1px, transparent 1px);
     z-index: 0;
     mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 40%, transparent 100%);
@@ -671,7 +674,7 @@ svg {
     font-size: clamp(40px, 8vw, 80px);
     font-weight: 800;
     line-height: 1.1;
-    color: var(--white-off);
+    color: var(--rose-bronze-light);
     letter-spacing: -0.02em;
 }
 
@@ -771,7 +774,7 @@ svg {
 
 .about-intro {
     font-size: 18px;
-    color: var(--white);
+    color: var(--rose-bronze-light);
     margin-bottom: 24px;
 }
 
@@ -966,7 +969,7 @@ svg {
 
 .skill-title {
     font-size: 20px;
-    color: var(--white-off);
+    color: var(--rose-bronze-light);
 }
 
 .skill-list li {
@@ -1017,7 +1020,7 @@ svg {
     right: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background: linear-gradient(90deg, transparent, rgba(201, 165, 158, 0.4), transparent);
     animation: shimmer 2s infinite;
 }
 
@@ -1081,7 +1084,7 @@ svg {
 
 .timeline-item:hover .timeline-dot {
     transform: scale(1.5);
-    background: var(--white);
+    background: var(--rose-bronze-light);
 }
 
 .timeline-content {
@@ -1107,7 +1110,7 @@ svg {
 
 .timeline-title {
     font-size: 20px;
-    color: var(--white-off);
+    color: var(--rose-bronze-light);
     margin-bottom: 8px;
 }
 
@@ -1134,7 +1137,7 @@ svg {
     font-family: var(--font-mono);
     font-size: 12px;
     padding: 4px 12px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(135, 120, 117, 0.05);
     color: var(--white-muted);
     border-radius: 20px;
 }
@@ -1175,7 +1178,7 @@ svg {
 
 .featured-project .project-title {
     font-size: clamp(24px, 3vw, 28px);
-    color: var(--white-off);
+    color: var(--rose-bronze-light);
     margin-bottom: 24px;
 }
 
@@ -1344,7 +1347,7 @@ svg {
 
 .kanban-col {
     flex: 1;
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(135, 120, 117, 0.02);
     border-radius: 6px;
     padding: 12px;
     border: var(--border-subtle);
@@ -1434,7 +1437,7 @@ svg {
 .contact-heading {
     font-size: clamp(40px, 5vw, 60px);
     font-weight: 800;
-    color: var(--white);
+    color: var(--rose-bronze-light);
     margin-bottom: 24px;
     letter-spacing: -0.02em;
 }
