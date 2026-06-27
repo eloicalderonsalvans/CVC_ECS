@@ -568,6 +568,51 @@ svg {
 }
 
 /* ===========================
+   LANGUAGE SWITCHER
+   =========================== */
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.lang-switcher {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    border: 1px solid rgba(212, 160, 23, 0.2);
+    border-radius: 999px;
+    background: rgba(10, 10, 10, 0.45);
+    backdrop-filter: blur(8px);
+}
+
+.lang-label {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--white-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.lang-select {
+    border: none;
+    background: transparent;
+    color: var(--mustard);
+    font-family: var(--font-mono);
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+}
+
+.lang-select option {
+    background: var(--black-medium);
+    color: var(--white-off);
+}
+
+/* ===========================
    HERO SECTION
    =========================== */
 .hero {

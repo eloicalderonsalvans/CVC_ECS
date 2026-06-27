@@ -74,13 +74,23 @@
                 <span class="logo-bracket">}</span>
             </a>
             <ul class="nav-links">
-                <li><a href="#about" class="nav-link"><span class="nav-number">01.</span> Sobre mí</a></li>
-                <li><a href="#skills" class="nav-link"><span class="nav-number">02.</span> Habilidades</a></li>
-                <li><a href="#education" class="nav-link"><span class="nav-number">03.</span> Formación</a></li>
-                <li><a href="#projects" class="nav-link"><span class="nav-number">04.</span> Proyectos</a></li>
-                <li><a href="#contact" class="nav-link"><span class="nav-number">05.</span> Contacto</a></li>
+                <li><a href="#about" class="nav-link"><span class="nav-number">01.</span> <span data-i18n="nav.about">Sobre mí</span></a></li>
+                <li><a href="#skills" class="nav-link"><span class="nav-number">02.</span> <span data-i18n="nav.skills">Habilidades</span></a></li>
+                <li><a href="#education" class="nav-link"><span class="nav-number">03.</span> <span data-i18n="nav.education">Formación</span></a></li>
+                <li><a href="#projects" class="nav-link"><span class="nav-number">04.</span> <span data-i18n="nav.projects">Proyectos</span></a></li>
+                <li><a href="#contact" class="nav-link"><span class="nav-number">05.</span> <span data-i18n="nav.contact">Contacto</span></a></li>
             </ul>
-            <a href="#contact" class="btn btn-nav">Hablemos</a>
+            <div class="nav-actions">
+                <div class="lang-switcher">
+                    <label class="lang-label" for="languageSelect" data-i18n="nav.languageLabel">Idioma</label>
+                    <select id="languageSelect" class="lang-select" aria-label="Seleccionar idioma">
+                        <option value="es">Español</option>
+                        <option value="ca">Català</option>
+                        <option value="en">English</option>
+                    </select>
+                </div>
+                <a href="#contact" class="btn btn-nav" data-i18n="nav.cta">Hablemos</a>
+            </div>
             <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -92,15 +102,15 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-links">
-            <li style="--i:0"><a href="#about" class="mobile-link"><span class="mobile-number">01.</span> Sobre mí</a>
+            <li style="--i:0"><a href="#about" class="mobile-link"><span class="mobile-number">01.</span> <span data-i18n="nav.about">Sobre mí</span></a>
             </li>
             <li style="--i:1"><a href="#skills" class="mobile-link"><span class="mobile-number">02.</span>
-                    Habilidades</a></li>
+                    <span data-i18n="nav.skills">Habilidades</span></a></li>
             <li style="--i:2"><a href="#education" class="mobile-link"><span class="mobile-number">03.</span>
-                    Formación</a></li>
+                    <span data-i18n="nav.education">Formación</span></a></li>
             <li style="--i:3"><a href="#projects" class="mobile-link"><span class="mobile-number">04.</span>
-                    Proyectos</a></li>
-            <li style="--i:4"><a href="#contact" class="mobile-link"><span class="mobile-number">05.</span> Contacto</a>
+                    <span data-i18n="nav.projects">Proyectos</span></a></li>
+            <li style="--i:4"><a href="#contact" class="mobile-link"><span class="mobile-number">05.</span> <span data-i18n="nav.contact">Contacto</span></a>
             </li>
         </ul>
     </div>
@@ -114,10 +124,10 @@
         <div class="hero-content">
             <div class="hero-badge">
                 <span class="badge-dot"></span>
-                Disponible para trabajar
+                <span data-i18n="hero.available">Disponible para trabajar</span>
             </div>
             <h1 class="hero-title">
-                <span class="hero-greeting">Hola, soy</span>
+                <span class="hero-greeting" data-i18n="hero.greeting">Hola, soy</span>
                 <span class="hero-name">
                     <span class="name-line" data-text="Eloi Calderon">Eloi Calderon</span>
                     <span class="name-line" data-text="Salvans">Salvans<span class="name-accent">.</span></span>
@@ -130,13 +140,13 @@
             </p>
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">
-                    <span>Ver Proyectos</span>
+                    <span data-i18n="hero.projects">Ver Proyectos</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
                 </a>
                 <a href="#contact" class="btn btn-outline">
-                    <span>Contactar</span>
+                    <span data-i18n="hero.contact">Contactar</span>
                 </a>
             </div>
         </div>
@@ -144,7 +154,7 @@
             <div class="scroll-mouse">
                 <div class="scroll-wheel"></div>
             </div>
-            <span>Scroll Down</span>
+            <span data-i18n="hero.scroll">Scroll Down</span>
         </div>
     </section>
 
@@ -153,17 +163,17 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">01</span>
-                <h2 class="section-title">Sobre mí</h2>
+                <h2 class="section-title" data-i18n="about.title">Sobre mí</h2>
                 <div class="section-line"></div>
             </div>
             <div class="about-grid">
                 <div class="about-text reveal-up">
-                    <p class="about-intro">
+                    <p class="about-intro" data-i18n-html="about.intro">
                         Soy un desarrollador con formación en <span class="highlight">DAW</span> (Desarrollo de
                         Aplicaciones Web) y <span class="highlight">DAM</span> (Desarrollo de Aplicaciones
                         Multiplataforma), apasionado por crear soluciones digitales modernas y funcionales.
                     </p>
-                    <p>
+                    <p data-i18n="about.description">
                         Mi experiencia abarca desde el desarrollo web con frameworks como Laravel hasta aplicaciones
                         móviles con Kotlin y Jetpack Compose. Me interesa especialmente el diseño de interfaces
                         intuitivas y la arquitectura de software limpia.
@@ -176,7 +186,7 @@
                                 <circle cx="12" cy="7" r="4" />
                             </svg>
                             <div>
-                                <span class="detail-label">Nombre</span>
+                                <span class="detail-label" data-i18n="about.nameLabel">Nombre</span>
                                 <span class="detail-value">Eloi Calderon Salvans</span>
                             </div>
                         </div>
@@ -198,8 +208,8 @@
                                 <circle cx="12" cy="10" r="3" />
                             </svg>
                             <div>
-                                <span class="detail-label">Ubicación</span>
-                                <span class="detail-value">Girona, Catalunya, España</span>
+                                <span class="detail-label" data-i18n="about.locationLabel">Ubicación</span>
+                                <span class="detail-value" data-i18n="about.locationValue">Girona, Catalunya, España</span>
                             </div>
                         </div>
                         <div class="detail-item">
@@ -209,8 +219,8 @@
                                 <path d="M6 12v5c3 3 9 3 12 0v-5" />
                             </svg>
                             <div>
-                                <span class="detail-label">Formación</span>
-                                <span class="detail-value">CFGM Sistemas Informáticos, CFGS DAW & DAM</span>
+                                <span class="detail-label" data-i18n="about.trainingLabel">Formación</span>
+                                <span class="detail-value" data-i18n="about.trainingValue">CFGM Sistemas Informáticos, CFGS DAW & DAM</span>
                             </div>
                         </div>
                     </div>
@@ -225,7 +235,7 @@
                                     <circle cx="12" cy="7" r="4" />
                                 </svg>
                             </div>
-                            <span>Tu foto aquí</span>
+                            <span data-i18n="about.photoPlaceholder">Tu foto aquí</span>
                         </div>
                     </div>
                     <div class="image-decoration"></div>
@@ -247,7 +257,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">02</span>
-                <h2 class="section-title">Habilidades</h2>
+                <h2 class="section-title" data-i18n="skills.title">Habilidades</h2>
                 <div class="section-line"></div>
             </div>
             <div class="skills-grid">
@@ -260,25 +270,25 @@
                                 <polyline points="8 6 2 12 8 18" />
                             </svg>
                         </div>
-                        <h3 class="skill-title">Frontend</h3>
+                        <h3 class="skill-title" data-i18n="skills.frontend">Frontend</h3>
                     </div>
                     <ul class="skill-list">
                         <li>
-                            <div class="skill-info"><span class="skill-name">HTML5 & CSS3</span><span
+                            <div class="skill-info"><span class="skill-name" data-i18n="skills.frontendHtml">HTML5 & CSS3</span><span
                                     class="skill-percent">90%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="90"></div>
                             </div>
                         </li>
                         <li>
-                            <div class="skill-info"><span class="skill-name">JavaScript</span><span
+                            <div class="skill-info"><span class="skill-name" data-i18n="skills.frontendJs">JavaScript</span><span
                                     class="skill-percent">75%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="75"></div>
                             </div>
                         </li>
                         <li>
-                            <div class="skill-info"><span class="skill-name">Blade Templates</span><span
+                            <div class="skill-info"><span class="skill-name" data-i18n="skills.frontendBlade">Blade Templates</span><span
                                     class="skill-percent">80%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="80"></div>
@@ -295,11 +305,11 @@
                                 <path d="M8 21h8M12 17v4" />
                             </svg>
                         </div>
-                        <h3 class="skill-title">Backend</h3>
+                        <h3 class="skill-title" data-i18n="skills.backend">Backend</h3>
                     </div>
                     <ul class="skill-list">
                         <li>
-                            <div class="skill-info"><span class="skill-name">PHP & Laravel</span><span
+                            <div class="skill-info"><span class="skill-name" data-i18n="skills.backendPhp">PHP & Laravel</span><span
                                     class="skill-percent">85%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="85"></div>
@@ -313,7 +323,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="skill-info"><span class="skill-name">APIs REST</span><span
+                            <div class="skill-info"><span class="skill-name" data-i18n="skills.backendApi">APIs REST</span><span
                                     class="skill-percent">70%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="70"></div>
@@ -330,7 +340,7 @@
                                 <path d="M12 18h.01" />
                             </svg>
                         </div>
-                        <h3 class="skill-title">Móvil</h3>
+                        <h3 class="skill-title" data-i18n="skills.mobile">Móvil</h3>
                     </div>
                     <ul class="skill-list">
                         <li>
@@ -366,7 +376,7 @@
                                 <path d="M2 12l10 5 10-5" />
                             </svg>
                         </div>
-                        <h3 class="skill-title">Herramientas</h3>
+                        <h3 class="skill-title" data-i18n="skills.tools">Herramientas</h3>
                     </div>
                     <ul class="skill-list">
                         <li>
@@ -401,7 +411,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">03</span>
-                <h2 class="section-title">Formación</h2>
+                <h2 class="section-title" data-i18n="education.title">Formación</h2>
                 <div class="section-line"></div>
             </div>
             <div class="timeline">
@@ -411,9 +421,9 @@
                     </div>
                     <div class="timeline-content">
                         <span class="timeline-date">2024 — 2026</span>
-                        <h3 class="timeline-title">CFGS Desarrollo de Aplicaciones Web (DAW)</h3>
+                        <h3 class="timeline-title" data-i18n="education.dawTitle">CFGS Desarrollo de Aplicaciones Web (DAW)</h3>
                         <p class="timeline-place">Institut Rafael Campalans — Catalunya</p>
-                        <p class="timeline-desc">Desarrollo web Full Stack con PHP, Laravel, JavaScript, HTML5, CSS3,
+                        <p class="timeline-desc" data-i18n="education.dawDesc">Desarrollo web Full Stack con PHP, Laravel, JavaScript, HTML5, CSS3,
                             MySQL. Diseño de interfaces, patrones MVC, APIs REST y despliegue de aplicaciones.</p>
                         <div class="timeline-tags">
                             <span>Laravel</span><span>PHP</span><span>JavaScript</span><span>MySQL</span>
@@ -426,9 +436,9 @@
                     </div>
                     <div class="timeline-content">
                         <span class="timeline-date">2023 — 2025</span>
-                        <h3 class="timeline-title">CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
+                        <h3 class="timeline-title" data-i18n="education.damTitle">CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
                         <p class="timeline-place">Institut Rafael Campalans — Catalunya</p>
-                        <p class="timeline-desc">Desarrollo de aplicaciones móviles con Kotlin y Jetpack Compose, bases
+                        <p class="timeline-desc" data-i18n="education.damDesc">Desarrollo de aplicaciones móviles con Kotlin y Jetpack Compose, bases
                             de datos, programación orientada a objetos y desarrollo multiplataforma.</p>
                         <div class="timeline-tags">
                             <span>Kotlin</span><span>Android</span><span>Jetpack Compose</span><span>Java</span>
@@ -444,7 +454,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">04</span>
-                <h2 class="section-title">Proyectos Destacados</h2>
+                <h2 class="section-title" data-i18n="projects.title">Proyectos Destacados</h2>
                 <div class="section-line"></div>
             </div>
 
@@ -478,10 +488,10 @@
                     </div>
                 </div>
                 <div class="featured-project-info">
-                    <span class="project-overline">Proyecto Destacado</span>
+                    <span class="project-overline" data-i18n="projects.featured">Proyecto Destacado</span>
                     <h3 class="project-title">ProjecteECS_DAW</h3>
                     <div class="project-description-card">
-                        <p>
+                        <p data-i18n-html="projects.project1Desc">
                             Proyecto final del Ciclo Formativo de Desarrollo de Aplicaciones Web, construido con el
                             framework
                             <strong>Laravel</strong>. Incluye sistema de templates con Blade, gestión de rutas,
@@ -530,27 +540,27 @@
                         <div class="preview-content">
                             <div class="preview-kanban">
                                 <div class="kanban-col">
-                                    <div class="kanban-header">To Do</div>
-                                    <div class="kanban-card">Diseñar UI</div>
-                                    <div class="kanban-card">API REST</div>
+                                    <div class="kanban-header" data-i18n="projects.todo">To Do</div>
+                                    <div class="kanban-card" data-i18n="projects.uiDesign">Diseñar UI</div>
+                                    <div class="kanban-card" data-i18n="projects.apiRest">API REST</div>
                                 </div>
                                 <div class="kanban-col">
-                                    <div class="kanban-header">In Progress</div>
-                                    <div class="kanban-card kanban-card--active">Auth Login</div>
+                                    <div class="kanban-header" data-i18n="projects.inProgress">In Progress</div>
+                                    <div class="kanban-card kanban-card--active" data-i18n="projects.authLogin">Auth Login</div>
                                 </div>
                                 <div class="kanban-col">
-                                    <div class="kanban-header">Done</div>
-                                    <div class="kanban-card kanban-card--done">Database</div>
+                                    <div class="kanban-header" data-i18n="projects.done">Done</div>
+                                    <div class="kanban-card kanban-card--done" data-i18n="projects.database">Database</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="featured-project-info">
-                    <span class="project-overline">Proyecto Destacado</span>
+                    <span class="project-overline" data-i18n="projects.featured">Proyecto Destacado</span>
                     <h3 class="project-title">ProjecteKanbanECS_DAW</h3>
                     <div class="project-description-card">
-                        <p>Tablero <strong>Kanban</strong> interactivo desarrollado con Laravel y Blade. Permite
+                        <p data-i18n-html="projects.project2Desc">Tablero <strong>Kanban</strong> interactivo desarrollado con Laravel y Blade. Permite
                             gestionar tareas con funcionalidad <strong>drag & drop</strong>, organizar proyectos en
                             columnas y hacer seguimiento del progreso del trabajo en equipo.</p>
                     </div>
@@ -589,7 +599,7 @@
                         <path
                             d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
                     </svg>
-                    <span>Ver más proyectos en GitHub</span>
+                    <span data-i18n="projects.more">Ver más proyectos en GitHub</span>
                 </a>
             </div>
         </div>
@@ -600,18 +610,18 @@
         <div class="container">
             <div class="section-header">
                 <span class="section-tag">05</span>
-                <h2 class="section-title">Contacto</h2>
+                <h2 class="section-title" data-i18n="contact.title">Contacto</h2>
                 <div class="section-line"></div>
             </div>
             <div class="contact-content reveal-up">
-                <span class="contact-overline">¿Siguiente paso?</span>
-                <h3 class="contact-heading">¿Hablamos?</h3>
-                <p class="contact-description">
+                <span class="contact-overline" data-i18n="contact.overline">¿Siguiente paso?</span>
+                <h3 class="contact-heading" data-i18n="contact.heading">¿Hablamos?</h3>
+                <p class="contact-description" data-i18n="contact.description">
                     Estoy abierto a nuevas oportunidades profesionales. Si tienes un proyecto interesante o una oferta,
                     no dudes en contactarme.
                 </p>
                 <a href="mailto:eloicalderon05@email.com" class="btn btn-primary btn-large" id="contact-cta">
-                    <span>Envíame un email</span>
+                    <span data-i18n="contact.cta">Envíame un email</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -650,7 +660,7 @@
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <p class="footer-text">
+                <p class="footer-text" data-i18n="footer.text">
                     Diseñado & desarrollado por <span class="highlight">Eloi Calderon Salvans</span>
                 </p>
                 <p class="footer-year">© 2026</p>
