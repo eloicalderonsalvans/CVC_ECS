@@ -58,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 locationValue: 'Girona, Catalunya, España',
                 trainingLabel: 'Formación',
                 trainingValue: 'CFGM Sistemas Informáticos, CFGS DAW & DAM',
-                photoPlaceholder: 'Tu foto aquí',
+                photoPlaceholder: 'Tu foto aqui',
             },
             skills: {
                 title: 'Habilidades', frontend: 'Frontend', backend: 'Backend',
