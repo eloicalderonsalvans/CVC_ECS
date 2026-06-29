@@ -11,23 +11,32 @@ document.addEventListener('DOMContentLoaded', () => {
     // Keys identical across all languages
     const SHARED = {
         skills: {
-            frontendHtml:  'HTML5 & CSS3',
-            frontendJs:    'JavaScript',
+            frontendHtml: 'HTML5 & CSS3',
+            frontendJs: 'JavaScript',
             frontendBlade: 'Blade Templates',
-            backendPhp:    'PHP & Laravel',
-            backendApi:    'APIs REST',
-        },
-        projects: {
-            apiRest:   'API REST',
-            done:      'Done / Hecho / Fet',
-        },
-        footer: {
-            text: 'Designed & developed by <span class="highlight">Eloi Calderon Salvans</span>',
+            backendPhp: 'PHP & Laravel',
+            backendMysql: 'MySQL',
+            backendApi: 'APIs REST',
+            mobileKotlin: 'Kotlin',
+            mobileCompose: 'Jetpack Compose',
+            mobileAndroid: 'Android SDK',
+            toolsGit: 'Git & GitHub',
+            toolsDocker: 'Docker',
+            toolsIde: 'VS Code / Android Studio',
         },
     };
 
     const translations = {
         es: {
+            meta: {
+                title: 'Eloi Calderon Salvans | CV - Desarrollador Web & Móvil',
+                description: 'Curriculum Vitae de Eloi Calderon Salvans - Desarrollador Web & Aplicaciones Móviles',
+            },
+            aria: {
+                openMenu: 'Abrir menú',
+                viewGithub: 'Ver en GitHub',
+                openExternal: 'Abrir enlace externo',
+            },
             nav: {
                 about: 'Sobre mí', skills: 'Habilidades', education: 'Formación',
                 projects: 'Proyectos', contact: 'Contacto', languageLabel: 'Idioma', cta: 'Hablemos',
@@ -35,6 +44,11 @@ document.addEventListener('DOMContentLoaded', () => {
             hero: {
                 available: 'Disponible para trabajar', greeting: 'Hola, soy',
                 projects: 'Ver Proyectos', contact: 'Contactar', scroll: 'Desplázate',
+                typed: [
+                    'Desarrollador Web Full Stack',
+                    'Desarrollador de Apps Móviles',
+                    'Apasionado por Laravel & Kotlin',
+                ],
             },
             about: {
                 title: 'Sobre mí',
@@ -52,6 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             education: {
                 title: 'Formación',
+                place: 'Institut Rafael Campalans — Catalunya',
                 dawTitle: 'CFGS Desarrollo de Aplicaciones Web (DAW)',
                 dawDesc: 'Desarrollo web Full Stack con PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Diseño de interfaces, patrones MVC, APIs REST y despliegue de aplicaciones.',
                 damTitle: 'CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)',
@@ -60,8 +75,9 @@ document.addEventListener('DOMContentLoaded', () => {
             projects: {
                 title: 'Proyectos Destacados', featured: 'Proyecto Destacado',
                 project1Desc: 'Proyecto final del Ciclo Formativo de Desarrollo de Aplicaciones Web, construido con el framework <strong>Laravel</strong>. Incluye sistema de templates con Blade, gestión de rutas, controladores y modelos siguiendo el patrón <strong>MVC</strong>. Base de datos MySQL con migraciones y seeders.',
+                apiRest: 'API REST',
                 todo: 'Por hacer', uiDesign: 'Diseñar UI',
-                inProgress: 'En progreso', authLogin: 'Inicio de sesión', database: 'Base de datos',
+                inProgress: 'En progreso', authLogin: 'Inicio de sesión', done: 'Hecho', database: 'Base de datos',
                 project2Desc: 'Tablero <strong>Kanban</strong> interactivo desarrollado con Laravel y Blade. Permite gestionar tareas con funcionalidad <strong>drag & drop</strong>, organizar proyectos en columnas y hacer seguimiento del progreso del trabajo en equipo.',
                 more: 'Ver más proyectos en GitHub',
             },
@@ -70,9 +86,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: 'Estoy abierto a nuevas oportunidades profesionales. Si tienes un proyecto interesante o una oferta, no dudes en contactarme.',
                 cta: 'Envíame un email',
             },
+            footer: {
+                text: 'Diseñado y desarrollado por',
+            },
         },
 
         ca: {
+            meta: {
+                title: 'Eloi Calderon Salvans | CV - Desenvolupador Web & Mòbil',
+                description: 'Currículum vitae d\'Eloi Calderon Salvans - Desenvolupador Web i Aplicacions Mòbils',
+            },
+            aria: {
+                openMenu: 'Obrir menú',
+                viewGithub: 'Veure a GitHub',
+                openExternal: 'Obrir enllaç extern',
+            },
             nav: {
                 about: 'Sobre mi', skills: 'Habilitats', education: 'Formació',
                 projects: 'Projectes', contact: 'Contacte', languageLabel: 'Idioma', cta: 'Parlem',
@@ -80,6 +108,11 @@ document.addEventListener('DOMContentLoaded', () => {
             hero: {
                 available: 'Disponible per treballar', greeting: 'Hola, soc',
                 projects: 'Veure projectes', contact: 'Contactar', scroll: "Desplaça't",
+                typed: [
+                    'Desenvolupador Web Full Stack',
+                    'Desenvolupador d\'Apps Mòbils',
+                    'Apassionat per Laravel i Kotlin',
+                ],
             },
             about: {
                 title: 'Sobre mi',
@@ -97,6 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             education: {
                 title: 'Formació',
+                place: 'Institut Rafael Campalans — Catalunya',
                 dawTitle: "CFGS Desenvolupament d'Aplicacions Web (DAW)",
                 dawDesc: "Desenvolupament web Full Stack amb PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Disseny d'interfícies, patrons MVC, APIs REST i desplegament d'aplicacions.",
                 damTitle: 'CFGS Desenvolupament d\'Aplicacions Multiplataforma (DAM)',
@@ -105,8 +139,9 @@ document.addEventListener('DOMContentLoaded', () => {
             projects: {
                 title: 'Projectes destacats', featured: 'Projecte destacat',
                 project1Desc: "Projecte final del Cicle Formatiu de Desenvolupament d'Aplicacions Web, construït amb el framework <strong>Laravel</strong>. Inclou sistema de plantilles amb Blade, gestió de rutes, controladors i models seguint el patró <strong>MVC</strong>. Base de dades MySQL amb migracions i seeders.",
+                apiRest: 'API REST',
                 todo: 'Per fer', uiDesign: 'Dissenyar UI',
-                inProgress: 'En progrés', authLogin: 'Inici de sessió', database: 'Base de dades',
+                inProgress: 'En progrés', authLogin: 'Inici de sessió', done: 'Fet', database: 'Base de dades',
                 project2Desc: 'Tauler <strong>Kanban</strong> interactiu desenvolupat amb Laravel i Blade. Permet gestionar tasques amb funcionalitat <strong>drag & drop</strong>, organitzar projectes en columnes i fer seguiment del progrés del treball en equip.',
                 more: 'Veure més projectes a GitHub',
             },
@@ -115,9 +150,21 @@ document.addEventListener('DOMContentLoaded', () => {
                 description: "Estic obert a noves oportunitats professionals. Si tens un projecte interessant o una oferta, no dubtis a contactar-me.",
                 cta: "Envia'm un email",
             },
+            footer: {
+                text: 'Dissenyat i desenvolupat per',
+            },
         },
 
         en: {
+            meta: {
+                title: 'Eloi Calderon Salvans | CV - Web & Mobile Developer',
+                description: 'Curriculum Vitae of Eloi Calderon Salvans - Web & Mobile Application Developer',
+            },
+            aria: {
+                openMenu: 'Open menu',
+                viewGithub: 'View on GitHub',
+                openExternal: 'Open external link',
+            },
             nav: {
                 about: 'About', skills: 'Skills', education: 'Education',
                 projects: 'Projects', contact: 'Contact', languageLabel: 'Language', cta: "Let's talk",
@@ -125,6 +172,11 @@ document.addEventListener('DOMContentLoaded', () => {
             hero: {
                 available: 'Available for work', greeting: "Hi, I'm",
                 projects: 'View Projects', contact: 'Contact', scroll: 'Scroll Down',
+                typed: [
+                    'Full Stack Web Developer',
+                    'Mobile App Developer',
+                    'Passionate about Laravel & Kotlin',
+                ],
             },
             about: {
                 title: 'About me',
@@ -142,6 +194,7 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             education: {
                 title: 'Education',
+                place: 'Institut Rafael Campalans — Catalonia',
                 dawTitle: 'Vocational Training in Web Application Development (DAW)',
                 dawDesc: 'Full Stack web development with PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Interface design, MVC patterns, REST APIs and application deployment.',
                 damTitle: 'Vocational Training in Multiplatform Application Development (DAM)',
@@ -150,8 +203,9 @@ document.addEventListener('DOMContentLoaded', () => {
             projects: {
                 title: 'Featured Projects', featured: 'Featured Project',
                 project1Desc: 'Final project of the Vocational Training in Web Application Development, built with the <strong>Laravel</strong> framework. It includes a Blade template system, route management, controllers and models following the <strong>MVC</strong> pattern. MySQL database with migrations and seeders.',
+                apiRest: 'REST API',
                 todo: 'To Do', uiDesign: 'Design UI',
-                inProgress: 'In Progress', authLogin: 'Login', database: 'Database',
+                inProgress: 'In Progress', authLogin: 'Login', done: 'Done', database: 'Database',
                 project2Desc: 'Interactive <strong>Kanban</strong> board developed with Laravel and Blade. It allows managing tasks with <strong>drag & drop</strong> functionality, organizing projects into columns and tracking team progress.',
                 more: 'See more projects on GitHub',
             },
@@ -159,6 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Contact', overline: 'Next step?', heading: 'Shall we talk?',
                 description: "I'm open to new professional opportunities. If you have an interesting project or an offer, feel free to get in touch.",
                 cta: 'Send me an email',
+            },
+            footer: {
+                text: 'Designed & developed by',
             },
         },
     };
@@ -176,13 +233,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const languageSelect = document.getElementById('languageSelect');
+    const typedTextEl = document.getElementById('typedText');
+    let currentLang = localStorage.getItem('preferred-language') ?? 'es';
+    let typeTimeoutId = null;
+    let phraseIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingInitialized = false;
 
     function applyTranslations(lang) {
-        document.documentElement.lang = lang;
+        currentLang = String(lang ?? 'es').toLowerCase();
+        if (!translations[currentLang]) currentLang = 'es';
+        document.documentElement.lang = currentLang;
+        document.title = t('meta.title', currentLang);
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) metaDescription.content = t('meta.description', currentLang);
 
         document.querySelectorAll('[data-i18n], [data-i18n-html]').forEach(el => {
-            const key   = el.dataset.i18n ?? el.dataset.i18nHtml;
-            const value = t(key, lang);
+            const key = el.dataset.i18n ?? el.dataset.i18nHtml;
+            const value = t(key, currentLang);
             if (el.dataset.i18nHtml) {
                 el.innerHTML = value;
             } else {
@@ -190,20 +260,61 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        if (languageSelect) languageSelect.value = lang;
+        document.querySelectorAll('[data-i18n-aria]').forEach(el => {
+            el.setAttribute('aria-label', t(el.dataset.i18nAria, lang));
+        });
+
+        if (languageSelect) {
+            languageSelect.value = lang;
+            languageSelect.setAttribute('aria-label', t('nav.languageLabel', lang));
+        }
+
         localStorage.setItem('preferred-language', lang);
+        restartTypeEffect();
+    }
+
+    function restartTypeEffect() {
+        if (!typedTextEl) return;
+        if (typeTimeoutId) clearTimeout(typeTimeoutId);
+        phraseIndex = 0;
+        charIndex = 0;
+        isDeleting = false;
+        typedTextEl.textContent = '';
+        const delay = typingInitialized ? 300 : 1500;
+        typingInitialized = true;
+        typeTimeoutId = setTimeout(typeEffect, delay);
+    }
+
+    function typeEffect() {
+        const phrases = translations[currentLang]?.hero?.typed ?? translations.es.hero.typed;
+        const phrase = phrases[phraseIndex];
+        typedTextEl.textContent = phrase.substring(0, charIndex + (isDeleting ? -1 : 1));
+        charIndex += isDeleting ? -1 : 1;
+
+        let delay = isDeleting ? 50 : 100;
+
+        if (!isDeleting && charIndex === phrase.length) {
+            isDeleting = true;
+            delay = 2000;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            phraseIndex = (phraseIndex + 1) % phrases.length;
+            delay = 500;
+        }
+
+        typeTimeoutId = setTimeout(typeEffect, delay);
     }
 
     if (languageSelect) {
         languageSelect.addEventListener('change', e => applyTranslations(e.target.value));
     }
 
-    applyTranslations(localStorage.getItem('preferred-language') ?? 'es');
+    applyTranslations(currentLang);
 
     // ===========================
     // PRELOADER
     // ===========================
-    const preloader        = document.getElementById('preloader');
+    const preloader = document.getElementById('preloader');
     const preloaderProgress = document.getElementById('preloaderProgress');
 
     document.body.style.overflow = 'hidden';
@@ -236,8 +347,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===========================
     // NAVBAR & MOBILE MENU
     // ===========================
-    const navbar     = document.getElementById('navbar');
-    const navToggle  = document.getElementById('navToggle');
+    const navbar = document.getElementById('navbar');
+    const navToggle = document.getElementById('navToggle');
     const mobileMenu = document.getElementById('mobileMenu');
     const [line1, line2, line3] = navToggle.querySelectorAll('.hamburger-line');
     let isMenuOpen = false;
@@ -252,7 +363,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = isMenuOpen ? 'hidden' : '';
 
         line1.style.transform = isMenuOpen ? 'rotate(45deg) translate(5px, 5px)' : '';
-        line2.style.opacity   = isMenuOpen ? '0' : '';
+        line2.style.opacity = isMenuOpen ? '0' : '';
         line3.style.transform = isMenuOpen ? 'rotate(-45deg) translate(5px, -5px)' : '';
     }
 
@@ -275,41 +386,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===========================
-    // TYPING EFFECT
+    // TYPING EFFECT (started by applyTranslations)
     // ===========================
-    const typedTextEl = document.getElementById('typedText');
-    const phrases = [
-        'Desarrollador Web Full Stack',
-        'Desarrollador de Apps Móviles',
-        'Apasionado por Laravel & Kotlin',
-    ];
-    let phraseIndex = 0, charIndex = 0, isDeleting = false;
-
-    function typeEffect() {
-        const phrase = phrases[phraseIndex];
-        typedTextEl.textContent = phrase.substring(0, charIndex + (isDeleting ? -1 : 1));
-        charIndex += isDeleting ? -1 : 1;
-
-        let delay = isDeleting ? 50 : 100;
-
-        if (!isDeleting && charIndex === phrase.length) {
-            isDeleting = true;
-            delay = 2000;
-        } else if (isDeleting && charIndex === 0) {
-            isDeleting = false;
-            phraseIndex = (phraseIndex + 1) % phrases.length;
-            delay = 500;
-        }
-
-        setTimeout(typeEffect, delay);
-    }
-
-    setTimeout(typeEffect, 1500);
 
     // ===========================
     // PARALLAX HERO GLOW
     // ===========================
-    const hero  = document.getElementById('hero');
+    const hero = document.getElementById('hero');
     const glow1 = document.querySelector('.hero-glow-1');
     const glow2 = document.querySelector('.hero-glow-2');
 

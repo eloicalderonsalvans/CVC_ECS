@@ -81,17 +81,17 @@
                 <li><a href="#contact" class="nav-link"><span class="nav-number">05.</span> <span data-i18n="nav.contact">Contacto</span></a></li>
             </ul>
             <div class="nav-actions">
-                <div class="lang-switcher">
-                    <label class="lang-label" for="languageSelect" data-i18n="nav.languageLabel">Idioma</label>
-                    <select id="languageSelect" class="lang-select" aria-label="Seleccionar idioma">
-                        <option value="es">Español</option>
-                        <option value="ca">Català</option>
-                        <option value="en">English</option>
+                <div class="lang-switcher" role="group" aria-label="Language selector">
+                    <span class="lang-label" data-i18n="nav.languageLabel">Idioma</span>
+                    <select id="languageSelect" class="lang-select" aria-label="Idioma">
+                        <option value="es">ES</option>
+                        <option value="ca">CA</option>
+                        <option value="en">EN</option>
                     </select>
                 </div>
-                <a href="#contact" class="btn btn-nav" data-i18n="nav.cta">Hablemos</a>
             </div>
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú">
+            <a href="#contact" class="btn btn-nav"><span data-i18n="nav.cta">Hablemos</span></a>
+            <button class="nav-toggle" id="navToggle" data-i18n-aria="aria.openMenu" aria-label="Abrir menú">
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
                 <span class="hamburger-line"></span>
@@ -122,10 +122,7 @@
         <div class="hero-glow hero-glow-2"></div>
         <div class="hero-noise"></div>
         <div class="hero-content">
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                <span data-i18n="hero.available">Disponible para trabajar</span>
-            </div>
+            <div class="hero-badge" data-i18n="hero.available">Disponible para trabajar</div>
             <h1 class="hero-title">
                 <span class="hero-greeting" data-i18n="hero.greeting">Hola, soy</span>
                 <span class="hero-name">
@@ -281,14 +278,14 @@
                             </div>
                         </li>
                         <li>
-                            <div class="skill-info"><span class="skill-name" data-i18n="skills.frontendJs">JavaScript</span><span
+                            <div class="skill-info"><span class="skill-name">JavaScript</span><span
                                     class="skill-percent">75%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="75"></div>
                             </div>
                         </li>
                         <li>
-                            <div class="skill-info"><span class="skill-name" data-i18n="skills.frontendBlade">Blade Templates</span><span
+                            <div class="skill-info"><span class="skill-name">Blade Templates</span><span
                                     class="skill-percent">80%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="80"></div>
@@ -323,7 +320,7 @@
                             </div>
                         </li>
                         <li>
-                            <div class="skill-info"><span class="skill-name" data-i18n="skills.backendApi">APIs REST</span><span
+                            <div class="skill-info"><span class="skill-name">APIs REST</span><span
                                     class="skill-percent">70%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="70"></div>
@@ -344,7 +341,7 @@
                     </div>
                     <ul class="skill-list">
                         <li>
-                            <div class="skill-info"><span class="skill-name">Kotlin</span><span
+                            <div class="skill-info"><span class="skill-name" data-i18n="skills.mobileKotlin">Kotlin</span><span
                                     class="skill-percent">75%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="75"></div>
@@ -380,7 +377,7 @@
                     </div>
                     <ul class="skill-list">
                         <li>
-                            <div class="skill-info"><span class="skill-name">Git & GitHub</span><span
+                            <div class="skill-info"><span class="skill-name" data-i18n="skills.toolsGit">Git & GitHub</span><span
                                     class="skill-percent">85%</span></div>
                             <div class="skill-bar">
                                 <div class="skill-fill" data-width="85"></div>
@@ -422,7 +419,7 @@
                     <div class="timeline-content">
                         <span class="timeline-date">2024 — 2026</span>
                         <h3 class="timeline-title" data-i18n="education.dawTitle">CFGS Desarrollo de Aplicaciones Web (DAW)</h3>
-                        <p class="timeline-place">Institut Rafael Campalans — Catalunya</p>
+                        <p class="timeline-place" data-i18n="education.place">Institut Rafael Campalans — Catalunya</p>
                         <p class="timeline-desc" data-i18n="education.dawDesc">Desarrollo web Full Stack con PHP, Laravel, JavaScript, HTML5, CSS3,
                             MySQL. Diseño de interfaces, patrones MVC, APIs REST y despliegue de aplicaciones.</p>
                         <div class="timeline-tags">
@@ -437,7 +434,7 @@
                     <div class="timeline-content">
                         <span class="timeline-date">2023 — 2025</span>
                         <h3 class="timeline-title" data-i18n="education.damTitle">CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)</h3>
-                        <p class="timeline-place">Institut Rafael Campalans — Catalunya</p>
+                        <p class="timeline-place" data-i18n="education.place">Institut Rafael Campalans — Catalunya</p>
                         <p class="timeline-desc" data-i18n="education.damDesc">Desarrollo de aplicaciones móviles con Kotlin y Jetpack Compose, bases
                             de datos, programación orientada a objetos y desarrollo multiplataforma.</p>
                         <div class="timeline-tags">
@@ -540,17 +537,17 @@
                         <div class="preview-content">
                             <div class="preview-kanban">
                                 <div class="kanban-col">
-                                    <div class="kanban-header" data-i18n="projects.todo">To Do</div>
-                                    <div class="kanban-card" data-i18n="projects.uiDesign">Diseñar UI</div>
-                                    <div class="kanban-card" data-i18n="projects.apiRest">API REST</div>
+                                    <div class="kanban-header">To Do</div>
+                                    <div class="kanban-card">Diseñar UI</div>
+                                    <div class="kanban-card">API REST</div>
                                 </div>
                                 <div class="kanban-col">
-                                    <div class="kanban-header" data-i18n="projects.inProgress">In Progress</div>
-                                    <div class="kanban-card kanban-card--active" data-i18n="projects.authLogin">Auth Login</div>
+                                    <div class="kanban-header">In Progress</div>
+                                    <div class="kanban-card kanban-card--active">Auth Login</div>
                                 </div>
                                 <div class="kanban-col">
-                                    <div class="kanban-header" data-i18n="projects.done">Done</div>
-                                    <div class="kanban-card kanban-card--done" data-i18n="projects.database">Database</div>
+                                    <div class="kanban-header">Done</div>
+                                    <div class="kanban-card kanban-card--done">Database</div>
                                 </div>
                             </div>
                         </div>
@@ -643,7 +640,7 @@
                         </svg>
                         <span>LinkedIn</span>
                     </a>
-                    <a href="tel:+34600000000" class="contact-bottom-link" id="contact-phone">
+                    <a href="tel:+34622260032" class="contact-bottom-link" id="contact-phone">
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2">
                             <path
@@ -661,7 +658,7 @@
         <div class="container">
             <div class="footer-content">
                 <p class="footer-text" data-i18n="footer.text">
-                    Diseñado & desarrollado por <span class="highlight">Eloi Calderon Salvans</span>
+                    Diseñado & desarrollado por <span class="highlight"> Eloi Calderon Salvans </span>
                 </p>
                 <p class="footer-year">© 2026</p>
             </div>
