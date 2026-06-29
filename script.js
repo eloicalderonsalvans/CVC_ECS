@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cta: 'Envíame un email',
             },
             footer: {
-                text: 'Diseñado y desarrollado por',
+                text: 'Diseñado y desarrollado por Eloi Calderon Salvans',
             },
         },
 
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cta: "Envia'm un email",
             },
             footer: {
-                text: 'Dissenyat i desenvolupat per',
+                text: 'Dissenyat i desenvolupat per Eloi Calderon Salvans',
             },
         },
 
@@ -215,7 +215,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 cta: 'Send me an email',
             },
             footer: {
-                text: 'Designed & developed by',
+                text: 'Designed & developed by Eloi Calderon Salvans',
             },
         },
     };
@@ -240,6 +240,10 @@ document.addEventListener('DOMContentLoaded', () => {
     let charIndex = 0;
     let isDeleting = false;
     let typingInitialized = false;
+
+    function getHeroPhrases(lang = currentLang) {
+        return translations[lang]?.hero?.typed ?? translations.es.hero.typed;
+    }
 
     function applyTranslations(lang) {
         currentLang = String(lang ?? 'es').toLowerCase();
@@ -279,15 +283,16 @@ document.addEventListener('DOMContentLoaded', () => {
         phraseIndex = 0;
         charIndex = 0;
         isDeleting = false;
-        typedTextEl.textContent = '';
+        const phrases = getHeroPhrases(currentLang);
+        typedTextEl.textContent = phrases[0] ?? '';
         const delay = typingInitialized ? 300 : 1500;
         typingInitialized = true;
         typeTimeoutId = setTimeout(typeEffect, delay);
     }
 
     function typeEffect() {
-        const phrases = translations[currentLang]?.hero?.typed ?? translations.es.hero.typed;
-        const phrase = phrases[phraseIndex];
+        const phrases = getHeroPhrases(currentLang);
+        const phrase = phrases[phraseIndex] ?? phrases[0] ?? '';
         typedTextEl.textContent = phrase.substring(0, charIndex + (isDeleting ? -1 : 1));
         charIndex += isDeleting ? -1 : 1;
 
