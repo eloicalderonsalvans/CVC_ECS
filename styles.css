@@ -835,6 +835,7 @@ svg {
 }
 
 .about-text p {
+    font-size: 18px;
     color: var(--white-muted);
     margin-bottom: 30px;
 }
@@ -1046,30 +1047,35 @@ svg {
 
 .skill-info {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 8px;
-    font-size: 14px;
-}
+        align-items: center;
+        margin-bottom: 8px;
+        font-size: 14px;
+    }
 
-.skill-name {
-    color: var(--white-muted);
-    font-weight: 500;
-}
+    .skill-name {
+        color: var(--white-muted);
+        font-weight: 500;
+    }
 
-.skill-percent {
-    font-family: var(--font-mono);
-    color: var(--mustard);
-    font-size: 12px;
-}
+    .skill-description {
+        margin: 0 0 18px;
+        color: var(--white-muted);
+        line-height: 1.6;
+        font-size: 14px;
+        max-width: 680px;
+    }
 
-.skill-bar {
-    height: 4px;
-    background: var(--black-medium);
-    border-radius: 2px;
-    overflow: hidden;
-}
+    .skill-percent {
+        font-family: var(--font-mono);
+        color: var(--mustard);
+        font-size: 12px;
+    }
 
-.skill-fill {
+    .skill-bar {
+        height: 4px;
+        background: var(--black-medium);
+        border-radius: 2px;
+        overflow: hidden;
     height: 100%;
     background: var(--mustard);
     width: 0;

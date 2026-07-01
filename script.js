@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mobileCompose: 'Jetpack Compose',
             mobileAndroid: 'Android SDK',
             toolsGit: 'Git & GitHub',
-            toolsDocker: 'Docker',
+            toolsUnity: 'Unity',
             toolsIde: 'VS Code / Android Studio',
         },
     };
@@ -55,28 +55,44 @@ document.addEventListener('DOMContentLoaded', () => {
             about: {
                 title: 'Sobre mí',
                 intro: 'Soy un desarrollador con formación en <span class="highlight">DAW</span> (Desarrollo de Aplicaciones Web) y <span class="highlight">DAM</span> (Desarrollo de Aplicaciones Multiplataforma), apasionado por crear soluciones digitales modernas y funcionales.',
-                description: 'Mi experiencia abarca desde el desarrollo web con frameworks como Laravel hasta aplicaciones móviles con Kotlin y Jetpack Compose. Me interesa especialmente el diseño de interfaces intuitivas y la arquitectura de software limpia.',
+                description: 'Mi experiencia abarca desde el desarrollo web con frameworks como Laravel hasta aplicaciones móviles con Kotlin y Jetpack Compose. Disfruto especialmente el desarrollo web, pero también me gusta crear aplicaciones y experimentar con videojuegos usando Unity.',
                 nameLabel: 'Nombre', locationLabel: 'Ubicación',
                 locationValue: 'Girona, Catalunya, España',
                 trainingLabel: 'Formación',
-                trainingValue: 'CFGM Sistemas Informáticos, CFGS DAW & DAM',
+                trainingValue: 'CFGM Sistemas Microinformáticos y Redes, CFGS DAW & DAM',
                 photoPlaceholder: 'Tu foto aqui',
             },
             skills: {
                 title: 'Habilidades', frontend: 'Frontend', backend: 'Backend',
                 mobile: 'Móvil', tools: 'Herramientas',
+                frontendHtmlDesc: 'Lenguajes para estructurar contenido web y aplicar estilos visuales y responsivos en páginas.',
+                frontendJsDesc: 'Lenguaje para añadir interactividad, animaciones y comportamiento dinámico en la web.',
+                frontendBladeDesc: 'Motor de plantillas de Laravel para generar vistas HTML dinámicas y reutilizables.',
+                backendPhpDesc: 'Lenguaje y framework para implementar la lógica de servidor, rutas y gestión de datos.',
+                backendMysqlDesc: 'Sistema de bases de datos relacional para almacenar y consultar información de aplicaciones.',
+                backendApiDesc: 'Modelo de servicios web para comunicar frontend y backend mediante solicitudes HTTP.',
+                mobileKotlinDesc: 'Lenguaje moderno para desarrollar aplicaciones Android con sintaxis clara.',
+                mobileComposeDesc: 'Biblioteca declarativa para construir interfaces de usuario en Android.',
+                mobileAndroidDesc: 'Conjunto de herramientas y APIs para acceder a funcionalidades nativas en apps móviles.',
+                toolsGitDesc: 'Sistema y plataforma para controlar versiones de código y colaborar en proyectos.',
+                toolsUnityDesc: 'Motor para crear prototipos y experiencias interactivas en videojuegos y simulaciones.',
+                toolsIdeDesc: 'Editores para escribir, depurar y probar código web y aplicaciones móviles.',
             },
             education: {
                 title: 'Formación',
                 place: 'Institut Rafael Campalans — Catalunya',
-                dawTitle: 'CFGS Desarrollo de Aplicaciones Web (DAW)',
-                dawDesc: 'Desarrollo web Full Stack con PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Diseño de interfaces, patrones MVC, APIs REST y despliegue de aplicaciones.',
+                cfgmTitle: 'CFGM Sistemas Microinformáticos y Redes',
+                cfgmDesc: 'Formación en redes, hardware y soporte técnico para instalar y mantener equipos y servicios informáticos.',
                 damTitle: 'CFGS Desarrollo de Aplicaciones Multiplataforma (DAM)',
                 damDesc: 'Desarrollo de aplicaciones móviles con Kotlin y Jetpack Compose, bases de datos, programación orientada a objetos y desarrollo multiplataforma.',
+                dawTitle: 'CFGS Desarrollo de Aplicaciones Web (DAW)',
+                dawDesc: 'Desarrollo web Full Stack con PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Diseño de interfaces, patrones MVC, APIs REST y despliegue de aplicaciones.',
             },
             projects: {
                 title: 'Proyectos Destacados', featured: 'Proyecto Destacado',
-                project1Desc: 'Proyecto final del Ciclo Formativo de Desarrollo de Aplicaciones Web, construido con el framework <strong>Laravel</strong>. Incluye sistema de templates con Blade, gestión de rutas, controladores y modelos siguiendo el patrón <strong>MVC</strong>. Base de datos MySQL con migraciones y seeders.',
+                project1Title: 'Fitxaring',
+                project1Desc: 'Fitxaring es un gestor de personal desarrollado con el framework <strong>Laravel</strong>. Incluye sistema de templates con Blade, gestión de rutas, controladores y modelos siguiendo el patrón <strong>MVC</strong>. Base de datos MySQL con migraciones y seeders.',
+                project2Title: 'Kanban',
                 apiRest: 'API REST',
                 todo: 'Por hacer', uiDesign: 'Diseñar UI',
                 inProgress: 'En progreso', authLogin: 'Inicio de sesión', done: 'Hecho', database: 'Base de datos',
@@ -121,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             about: {
                 title: 'Sobre mi',
                 intro: "Soc un desenvolupador amb formació en <span class=\"highlight\">DAW</span> (Desenvolupament d'Aplicacions Web) i <span class=\"highlight\">DAM</span> (Desenvolupament d'Aplicacions Multiplataforma), apassionat per crear solucions digitals modernes i funcionals.",
-                description: "La meva experiència abasta des del desenvolupament web amb frameworks com Laravel fins a aplicacions mòbils amb Kotlin i Jetpack Compose. M'interessa especialment el disseny d'interfícies intuïtives i l'arquitectura de programari neta.",
+                description: "La meva experiència abasta des del desenvolupament web amb frameworks com Laravel fins a aplicacions mòbils amb Kotlin i Jetpack Compose. Gaudeixo especialment del desenvolupament web, però també m'agrada crear aplicacions i explorar videojocs amb Unity.",
                 nameLabel: 'Nom', locationLabel: 'Ubicació',
                 locationValue: 'Girona, Catalunya, Espanya',
                 trainingLabel: 'Formació',
@@ -131,18 +147,34 @@ document.addEventListener('DOMContentLoaded', () => {
             skills: {
                 title: 'Habilitats', frontend: 'Frontend', backend: 'Backend',
                 mobile: 'Mòbil', tools: 'Eines',
+                frontendHtmlDesc: 'Llenguatges per estructurar contingut web i aplicar estils visuals i responsius a pàgines.',
+                frontendJsDesc: 'Llenguatge per afegir interactivitat, animacions i comportament dinàmic a la web.',
+                frontendBladeDesc: 'Motor de plantilles de Laravel per generar vistes HTML dinàmiques i reutilitzables.',
+                backendPhpDesc: 'Llenguatge i framework per implementar la lògica de servidor, rutes i gestió de dades.',
+                backendMysqlDesc: "Sistema de bases de dades relacional per emmagatzemar i consultar informació d'aplicacions.",
+                backendApiDesc: 'Model de serveis web per comunicar frontend i backend mitjançant sol·licituds HTTP.',
+                mobileKotlinDesc: 'Llenguatge modern per desenvolupar aplicacions Android amb sintaxi clara.',
+                mobileComposeDesc: "Biblioteca declarativa per construir interfícies d'usuari a Android.",
+                mobileAndroidDesc: "Conjunt d'eines i APIs per accedir a funcionalitats natives en apps mòbils.",
+                toolsGitDesc: 'Sistema i plataforma per controlar versions de codi i col·laborar en projectes.',
+                toolsUnityDesc: 'Motor per crear prototips i experiències interactives en videojocs i simulacions.',
+                toolsIdeDesc: 'Editors per escriure, depurar i provar codi web i aplicacions mòbils.',
             },
             education: {
                 title: 'Formació',
                 place: 'Institut Rafael Campalans — Catalunya',
-                dawTitle: "CFGS Desenvolupament d'Aplicacions Web (DAW)",
-                dawDesc: "Desenvolupament web Full Stack amb PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Disseny d'interfícies, patrons MVC, APIs REST i desplegament d'aplicacions.",
+                cfgmTitle: 'CFGM Sistemes Microinformàtics i Xarxes',
+                cfgmDesc: 'Formació en xarxes, hardware i suport tècnic per instal·lar i mantenir equips i serveis informàtics.',
                 damTitle: 'CFGS Desenvolupament d\'Aplicacions Multiplataforma (DAM)',
                 damDesc: "Desenvolupament d'aplicacions mòbils amb Kotlin i Jetpack Compose, bases de dades, programació orientada a objectes i desenvolupament multiplataforma.",
+                dawTitle: "CFGS Desenvolupament d'Aplicacions Web (DAW)",
+                dawDesc: "Desenvolupament web Full Stack amb PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Disseny d'interfícies, patrons MVC, APIs REST i desplegament d'aplicacions.",
             },
             projects: {
                 title: 'Projectes destacats', featured: 'Projecte destacat',
-                project1Desc: "Projecte final del Cicle Formatiu de Desenvolupament d'Aplicacions Web, construït amb el framework <strong>Laravel</strong>. Inclou sistema de plantilles amb Blade, gestió de rutes, controladors i models seguint el patró <strong>MVC</strong>. Base de dades MySQL amb migracions i seeders.",
+                project1Title: 'Fitxaring',
+                project1Desc: "Fitxaring és un gestor de personal desenvolupat amb el framework <strong>Laravel</strong>. Inclou sistema de plantilles amb Blade, gestió de rutes, controladors i models seguint el patró <strong>MVC</strong>. Base de dades MySQL amb migracions i seeders.",
+                project2Title: 'Kanban',
                 apiRest: 'API REST',
                 todo: 'Per fer', uiDesign: 'Dissenyar UI',
                 inProgress: 'En progrés', authLogin: 'Inici de sessió', done: 'Fet', database: 'Base de dades',
@@ -187,28 +219,44 @@ document.addEventListener('DOMContentLoaded', () => {
             about: {
                 title: 'About me',
                 intro: 'I\'m a developer with training in <span class="highlight">DAW</span> (Web Application Development) and <span class="highlight">DAM</span> (Multiplatform Application Development), passionate about creating modern and functional digital solutions.',
-                description: "My experience ranges from web development with frameworks like Laravel to mobile applications with Kotlin and Jetpack Compose. I'm especially interested in intuitive interface design and clean software architecture.",
+                description: "My experience ranges from web development with frameworks like Laravel to mobile applications with Kotlin and Jetpack Compose. I especially enjoy web development, but I also like building apps and exploring game development with Unity.",
                 nameLabel: 'Name', locationLabel: 'Location',
                 locationValue: 'Girona, Catalonia, Spain',
                 trainingLabel: 'Education',
-                trainingValue: 'Vocational training in Computer Systems, DAW & DAM',
+                trainingValue: 'Vocational training in Computer Systems and Networks, DAW & DAM',
                 photoPlaceholder: 'Your photo here',
             },
             skills: {
                 title: 'Skills', frontend: 'Frontend', backend: 'Backend',
                 mobile: 'Mobile', tools: 'Tools',
+                frontendHtmlDesc: 'Languages to structure web content and apply visual, responsive styling across pages.',
+                frontendJsDesc: 'Language to add interactivity, animations and dynamic behavior to web interfaces.',
+                frontendBladeDesc: 'Laravel template engine for generating dynamic, reusable HTML views.',
+                backendPhpDesc: 'Language and framework to implement server logic, routing and data management.',
+                backendMysqlDesc: 'Relational database system to store and query application information.',
+                backendApiDesc: 'Web service pattern to connect frontend and backend via HTTP requests.',
+                mobileKotlinDesc: 'Modern language for building Android applications with clear syntax.',
+                mobileComposeDesc: 'Declarative library for constructing user interfaces on Android.',
+                mobileAndroidDesc: 'Toolset and APIs to access native features in mobile applications.',
+                toolsGitDesc: 'System and platform to manage code versions and collaborate on projects.',
+                toolsUnityDesc: 'Engine for prototyping and interactive experiences in games and simulations.',
+                toolsIdeDesc: 'Editors to write, debug and test web code and mobile applications.',
             },
             education: {
                 title: 'Education',
                 place: 'Institut Rafael Campalans — Catalonia',
-                dawTitle: 'Vocational Training in Web Application Development (DAW)',
-                dawDesc: 'Full Stack web development with PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Interface design, MVC patterns, REST APIs and application deployment.',
+                cfgmTitle: 'Vocational Training in Computer Systems and Networks',
+                cfgmDesc: 'Training in networks, hardware and technical support to install and maintain computer equipment and services.',
                 damTitle: 'Vocational Training in Multiplatform Application Development (DAM)',
                 damDesc: 'Mobile application development with Kotlin and Jetpack Compose, databases, object-oriented programming and multiplatform development.',
+                dawTitle: 'Vocational Training in Web Application Development (DAW)',
+                dawDesc: 'Full Stack web development with PHP, Laravel, JavaScript, HTML5, CSS3, MySQL. Interface design, MVC patterns, REST APIs and application deployment.',
             },
             projects: {
                 title: 'Featured Projects', featured: 'Featured Project',
-                project1Desc: 'Final project of the Vocational Training in Web Application Development, built with the <strong>Laravel</strong> framework. It includes a Blade template system, route management, controllers and models following the <strong>MVC</strong> pattern. MySQL database with migrations and seeders.',
+                project1Title: 'Fitxaring',
+                project1Desc: 'Fitxaring is a personnel management system developed with the <strong>Laravel</strong> framework. It includes a Blade template system, route management, controllers, and models following the <strong>MVC</strong> pattern. MySQL database with migrations and seeders.',
+                project2Title: 'Kanban',
                 apiRest: 'REST API',
                 todo: 'To Do', uiDesign: 'Design UI',
                 inProgress: 'In Progress', authLogin: 'Login', done: 'Done', database: 'Database',
@@ -454,22 +502,4 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { rootMargin: '0px 0px -100px 0px', threshold: 0.1 });
 
     document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
-
-    // ===========================
-    // BARRAS DE HABILIDADES
-    // ===========================
-    // Recorre las barras de progreso de habilidades y las rellena al entrar en la sección.
-    const skillsSection = document.getElementById('skills');
-
-    if (skillsSection) {
-        new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (!entry.isIntersecting) return;
-                entry.target.querySelectorAll('.skill-fill').forEach(fill => {
-                    fill.style.width = fill.dataset.width + '%';
-                });
-            });
-        }, { threshold: 0.2 }).observe(skillsSection);
-    }
-
 });
