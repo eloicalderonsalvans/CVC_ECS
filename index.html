@@ -17,6 +17,7 @@
 
 <body>
 
+    <!-- Bloque inicial: preloader y barra de progreso visual -->
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
@@ -34,7 +35,7 @@
     <!-- Scroll Progress -->
     <div class="scroll-progress" id="scrollProgress"></div>
 
-    <!-- Floating Social Sidebar -->
+    <!-- Barra lateral flotante con enlaces a GitHub, LinkedIn y email -->
     <aside class="social-sidebar" id="socialSidebar">
         <a href="https://github.com/eloicalderonsalvans" target="_blank" rel="noopener noreferrer" aria-label="GitHub"
             class="social-link">
@@ -59,20 +60,22 @@
         <div class="social-line"></div>
     </aside>
 
-    <!-- Email Sidebar (Right) -->
+    <!-- Barra lateral derecha con el correo visible permanentemente -->
     <aside class="email-sidebar" id="emailSidebar">
         <a href="mailto:eloicalderon05@gmail.com" class="email-link">eloicalderon05@gmail.com</a>
         <div class="social-line"></div>
     </aside>
 
-    <!-- Navigation -->
+    <!-- Navegación principal, selector de idioma y menú móvil -->
     <nav class="navbar" id="navbar">
         <div class="nav-container">
+            <!-- Logo de la web, vuelve al inicio de la página -->
             <a href="#hero" class="nav-logo">
                 <span class="logo-bracket">{</span>
                 <span class="logo-text">ECS</span>
                 <span class="logo-bracket">}</span>
             </a>
+            <!-- Enlaces de navegación principales del sitio -->
             <ul class="nav-links">
                 <li><a href="#about" class="nav-link"><span class="nav-number">01.</span> <span data-i18n="nav.about">Sobre mí</span></a></li>
                 <li><a href="#skills" class="nav-link"><span class="nav-number">02.</span> <span data-i18n="nav.skills">Habilidades</span></a></li>
@@ -80,6 +83,7 @@
                 <li><a href="#projects" class="nav-link"><span class="nav-number">04.</span> <span data-i18n="nav.projects">Proyectos</span></a></li>
                 <li><a href="#contact" class="nav-link"><span class="nav-number">05.</span> <span data-i18n="nav.contact">Contacto</span></a></li>
             </ul>
+            <!-- Selector de idioma y botón de contacto rápido -->
             <div class="nav-actions">
                 <div class="lang-switcher" role="group" aria-label="Language selector">
                     <span class="lang-label" data-i18n="nav.languageLabel">Idioma</span>
@@ -99,7 +103,7 @@
         </div>
     </nav>
 
-    <!-- Mobile Menu -->
+    <!-- Menú móvil desplegable para pantallas pequeñas -->
     <div class="mobile-menu" id="mobileMenu">
         <ul class="mobile-links">
             <li style="--i:0"><a href="#about" class="mobile-link"><span class="mobile-number">01.</span> <span data-i18n="nav.about">Sobre mí</span></a>
@@ -115,17 +119,19 @@
         </ul>
     </div>
 
-    <!-- Hero Section -->
+    <!-- Sección hero: presentación inicial y llamada a la acción -->
     <section class="hero" id="hero">
         <div class="hero-grid" id="heroGrid"></div>
         <div class="hero-glow hero-glow-1"></div>
         <div class="hero-glow hero-glow-2"></div>
         <div class="hero-noise"></div>
         <div class="hero-content">
+            <!-- Badge de disponibilidad para mostrar que el perfil está abierto a oportunidades -->
             <div class="hero-badge">
                 <span class="badge-dot" aria-hidden="true"></span>
                 <span class="badge-text" data-i18n="hero.available">Disponible para trabajar</span>
             </div>
+            <!-- Título principal con nombre y apellido -->
             <h1 class="hero-title">
                 <span class="hero-greeting" data-i18n="hero.greeting">Hola, soy</span>
                 <span class="hero-name">
@@ -138,6 +144,7 @@
                 <span class="typed-text" id="typedText"></span>
                 <span class="cursor">|</span>
             </p>
+            <!-- Botones principales de acción del hero -->
             <div class="hero-cta">
                 <a href="#projects" class="btn btn-primary">
                     <span data-i18n="hero.projects">Ver Proyectos</span>
@@ -158,7 +165,7 @@
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- Sección “Sobre mí”: presentación personal y datos básicos -->
     <section class="section about" id="about">
         <div class="container">
             <div class="section-header">
@@ -178,7 +185,8 @@
                         móviles con Kotlin y Jetpack Compose. Me interesa especialmente el diseño de interfaces
                         intuitivas y la arquitectura de software limpia.
                     </p>
-                    <div class="about-details">
+                    <!-- Bloque con datos personales clave: nombre, email, ubicación y formación -->
+                <div class="about-details">
                         <div class="detail-item">
                             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2">
@@ -225,6 +233,7 @@
                         </div>
                     </div>
                 </div>
+                <!-- Imagen de perfil con decoración visual adicional -->
                 <div class="about-image reveal-up" style="--delay: 0.2s">
                     <div class="image-frame">
                         <img src="Foto_CVC.png" alt="Eloi Calderon Salvans" class="profile-image">
@@ -243,7 +252,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Sección de habilidades: tarjetas con tecnologías y barras de progreso -->
     <section class="section skills" id="skills">
         <div class="container">
             <div class="section-header">
@@ -397,7 +406,7 @@
         </div>
     </section>
 
-    <!-- Education / Timeline Section -->
+    <!-- Sección de formación: línea temporal con estudios y experiencia académica -->
     <section class="section education" id="education">
         <div class="container">
             <div class="section-header">
@@ -440,7 +449,7 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Sección de proyectos: proyectos destacados con vista previa y enlaces -->
     <section class="section projects" id="projects">
         <div class="container">
             <div class="section-header">
@@ -596,7 +605,7 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Sección de contacto: botones de email y descarga del CV -->
     <section class="section contact" id="contact">
         <div class="container">
             <div class="section-header">
@@ -615,6 +624,15 @@
                     <span data-i18n="contact.cta">Envíame un email</span>
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M5 12h14M12 5l7 7-7 7" />
+                    </svg>
+                </a>
+
+                <!-- aria-label aporta un texto accesible para lectores de pantalla cuando el usuario navega con teclado o voz -->
+                <a href="./CurriculumVitae_EloiCalderonSalvans.pdf" class="btn btn-primary btn-large" id="download-cv" data-download-link="true"
+                    download="CurriculumVitae_EloiCalderonSalvans.pdf" aria-label="Descargar currículum en PDF">
+                    <span data-i18n="contact.downloadCv">Descargar CV</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 3v12m0 0 5-5m-5 5-5-5M4 19h16" />
                     </svg>
                 </a>
                 <div class="contact-links">
@@ -647,7 +665,7 @@
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Pie de página con firma y año actual -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">

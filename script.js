@@ -7,8 +7,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===========================
     // I18N
     // ===========================
+    // Gestiona los textos traducidos para español, catalán e inglés.
 
-    // Keys identical across all languages
+    // Texto reutilizable que aparece igual en todos los idiomas
     const SHARED = {
         skills: {
             frontendHtml: 'HTML5 & CSS3',
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     };
 
+    // Contenido traducido para cada idioma del portfolio
     const translations = {
         es: {
             meta: {
@@ -85,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Contacto', overline: '¿Siguiente paso?', heading: '¿Hablamos?',
                 description: 'Estoy abierto a nuevas oportunidades profesionales. Si tienes un proyecto interesante o una oferta, no dudes en contactarme.',
                 cta: 'Envíame un email',
+                downloadCv: 'Descargar CV',
+                downloadCvAria: 'Descargar currículum en PDF',
             },
             footer: {
                 text: 'Diseñado y desarrollado por Eloi Calderon Salvans',
@@ -149,6 +153,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Contacte', overline: 'Següent pas?', heading: 'Parlem?',
                 description: "Estic obert a noves oportunitats professionals. Si tens un projecte interessant o una oferta, no dubtis a contactar-me.",
                 cta: "Envia'm un email",
+                downloadCv: 'Descarregar CV',
+                downloadCvAria: 'Descarregar currículum en PDF',
             },
             footer: {
                 text: 'Dissenyat i desenvolupat per Eloi Calderon Salvans',
@@ -213,6 +219,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 title: 'Contact', overline: 'Next step?', heading: 'Shall we talk?',
                 description: "I'm open to new professional opportunities. If you have an interesting project or an offer, feel free to get in touch.",
                 cta: 'Send me an email',
+                downloadCv: 'Download CV',
+                downloadCvAria: 'Download curriculum in PDF',
             },
             footer: {
                 text: 'Designed & developed by Eloi Calderon Salvans',
@@ -220,18 +228,20 @@ document.addEventListener('DOMContentLoaded', () => {
         },
     };
 
-    // Merge SHARED keys into every language
+    // Mezcla los textos compartidos en cada idioma para no repetirlos
     Object.values(translations).forEach(lang => {
         Object.entries(SHARED).forEach(([section, keys]) => {
             lang[section] = { ...keys, ...lang[section] };
         });
     });
 
-    // Resolve a dot-notation key like "nav.about" against the nested object
+    // Busca un texto usando una ruta tipo "nav.about" dentro del objeto de traducciones.
+    // Sirve para recuperar el valor correcto según el idioma activo.
     function t(key, lang) {
         return key.split('.').reduce((obj, k) => obj?.[k], translations[lang] ?? translations.es) ?? key;
     }
 
+    // Elementos del DOM que se van a actualizar dinámicamente
     const languageSelect = document.getElementById('languageSelect');
     const typedTextEl = document.getElementById('typedText');
     let currentLang = localStorage.getItem('preferred-language') ?? 'es';
@@ -241,10 +251,13 @@ document.addEventListener('DOMContentLoaded', () => {
     let isDeleting = false;
     let typingInitialized = false;
 
+    // Devuelve las frases que se muestran en el hero según el idioma activo
     function getHeroPhrases(lang = currentLang) {
         return translations[lang]?.hero?.typed ?? translations.es.hero.typed;
     }
 
+    // Cambia el idioma de la página y actualiza todos los textos traducibles.
+    // También reinicia el efecto de escritura del hero y guarda la preferencia en localStorage.
     function applyTranslations(lang) {
         currentLang = String(lang ?? 'es').toLowerCase();
         if (!translations[currentLang]) currentLang = 'es';
@@ -265,18 +278,19 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.querySelectorAll('[data-i18n-aria]').forEach(el => {
-            el.setAttribute('aria-label', t(el.dataset.i18nAria, lang));
+            el.setAttribute('aria-label', t(el.dataset.i18nAria, currentLang));
         });
 
         if (languageSelect) {
-            languageSelect.value = lang;
-            languageSelect.setAttribute('aria-label', t('nav.languageLabel', lang));
+            languageSelect.value = currentLang;
+            languageSelect.setAttribute('aria-label', t('nav.languageLabel', currentLang));
         }
 
-        localStorage.setItem('preferred-language', lang);
+        localStorage.setItem('preferred-language', currentLang);
         restartTypeEffect();
     }
 
+    // Reinicia el efecto de escritura del texto del hero
     function restartTypeEffect() {
         if (!typedTextEl) return;
         if (typeTimeoutId) clearTimeout(typeTimeoutId);
@@ -290,6 +304,7 @@ document.addEventListener('DOMContentLoaded', () => {
         typeTimeoutId = setTimeout(typeEffect, delay);
     }
 
+    // Simula el efecto de escribir y borrar texto letra a letra
     function typeEffect() {
         const phrases = getHeroPhrases(currentLang);
         const phrase = phrases[phraseIndex] ?? phrases[0] ?? '';
@@ -316,9 +331,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     applyTranslations(currentLang);
 
+    // Actualiza el atributo aria-label del enlace de descarga del CV según el idioma activo
+    const cvDownloadLink = document.getElementById('download-cv');
+    if (cvDownloadLink) {
+        cvDownloadLink.setAttribute('aria-label', t('contact.downloadCvAria', currentLang));
+        const cvTextSpan = cvDownloadLink.querySelector('[data-i18n], [data-i18n-html]');
+        if (cvTextSpan) {
+            const spanKey = cvTextSpan.dataset.i18n ?? cvTextSpan.dataset.i18nHtml;
+            const spanValue = t(spanKey || 'contact.downloadCv', currentLang);
+            if (cvTextSpan.dataset.i18nHtml) cvTextSpan.innerHTML = spanValue; else cvTextSpan.textContent = spanValue;
+        }
+    }
+
     // ===========================
-    // PRELOADER
+    // PRELOADER: muestra una pantalla de carga inicial
     // ===========================
+    // Simula el progreso de carga y oculta el preloader cuando termina.
     const preloader = document.getElementById('preloader');
     const preloaderProgress = document.getElementById('preloaderProgress');
 
@@ -339,8 +367,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 200);
 
     // ===========================
-    // SCROLL PROGRESS
+    // BARRA DE PROGRESO AL HACER SCROLL
     // ===========================
+    // Actualiza la barra superior según el porcentaje de scroll del usuario.
     const scrollProgress = document.getElementById('scrollProgress');
 
     window.addEventListener('scroll', () => {
@@ -350,8 +379,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { passive: true });
 
     // ===========================
-    // NAVBAR & MOBILE MENU
+    // NAVBAR Y MENÚ MÓVIL
     // ===========================
+    // Controla el comportamiento de la barra superior y del menú hamburguesa en móvil.
     const navbar = document.getElementById('navbar');
     const navToggle = document.getElementById('navToggle');
     const mobileMenu = document.getElementById('mobileMenu');
@@ -376,9 +406,10 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.mobile-link').forEach(link => link.addEventListener('click', toggleMenu));
 
     // ===========================
-    // SMOOTH SCROLL
+    // SCROLL SUAVE ENTRE SECCIONES
     // ===========================
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    // Hace que los enlaces internos se desplacen suavemente a la sección correspondiente.
+    document.querySelectorAll('a[href^="#"]:not([data-download-link])').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             e.preventDefault();
             const target = document.querySelector(this.getAttribute('href'));
@@ -391,11 +422,11 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===========================
-    // TYPING EFFECT (started by applyTranslations)
+    // EFECTO DE TYPING (se activa al cambiar de idioma)
     // ===========================
 
     // ===========================
-    // PARALLAX HERO GLOW
+    // EFECTO PARALLAX DEL HERO
     // ===========================
     const hero = document.getElementById('hero');
     const glow1 = document.querySelector('.hero-glow-1');
@@ -411,8 +442,9 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ===========================
-    // SCROLL REVEAL
+    // ANIMACIONES AL ENTRAR EN PANTALLA
     // ===========================
+    // Activa la clase de aparición cuando los elementos entran en la vista.
     const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (!entry.isIntersecting) return;
@@ -424,8 +456,9 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.reveal-up').forEach(el => revealObserver.observe(el));
 
     // ===========================
-    // SKILL BARS
+    // BARRAS DE HABILIDADES
     // ===========================
+    // Recorre las barras de progreso de habilidades y las rellena al entrar en la sección.
     const skillsSection = document.getElementById('skills');
 
     if (skillsSection) {

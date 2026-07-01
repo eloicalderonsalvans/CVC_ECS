@@ -48,6 +48,7 @@
 /* ===========================
    RESET & BASE
    =========================== */
+/* Normaliza los estilos por defecto del navegador para que la página se vea consistente */
 *,
 *::before,
 *::after {
@@ -118,6 +119,7 @@ svg {
 /* ===========================
    PRELOADER
    =========================== */
+/* Pantalla de carga inicial que aparece al abrir la web */
 .preloader {
     position: fixed;
     inset: 0;
@@ -184,6 +186,7 @@ svg {
 /* ===========================
    SCROLL PROGRESS
    =========================== */
+/* Barra superior que indica el avance de scroll en la página */
 .scroll-progress {
     position: fixed;
     top: 0;
@@ -199,6 +202,7 @@ svg {
 /* ===========================
    UTILITIES
    =========================== */
+/* Clases reutilizables como contenedores, resaltados y ayudas visuales */
 .container {
     max-width: var(--container-width);
     margin: 0 auto;
@@ -348,6 +352,7 @@ svg {
 /* ===========================
    BUTTONS
    =========================== */
+/* Define los estilos de los botones principales, secundarios y de navegación. Si cambias un botón, aquí es donde se controla su apariencia general. */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -421,6 +426,7 @@ svg {
 /* ===========================
    NAVBAR
    =========================== */
+/* Estiliza la cabecera fija, el logo, los links del menú y el botón del menú hamburguesa para móvil. */
 .navbar {
     position: fixed;
     top: 0;
@@ -618,6 +624,7 @@ svg {
 /* ===========================
    HERO SECTION
    =========================== */
+/* Da forma a la portada inicial: fondo visual, texto principal, badge de estado y botones de acción. */
 .hero {
     min-height: 100vh;
     display: flex;
@@ -814,6 +821,7 @@ svg {
 /* ===========================
    ABOUT SECTION
    =========================== */
+/* Diseño de la sección “Sobre mí”: estructura del texto, datos personales, imagen y decoración visual. */
 .about-grid {
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -984,6 +992,7 @@ svg {
 /* ===========================
    SKILLS SECTION
    =========================== */
+/* Estilo de las tarjetas de habilidades, sus iconos y las barras de progreso que muestran el nivel. */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1088,6 +1097,7 @@ svg {
 /* ===========================
    EDUCATION TIMELINE
    =========================== */
+/* Diseño de la línea temporal de formación y estudios */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -1200,6 +1210,7 @@ svg {
 /* ===========================
    PROJECTS SECTION
    =========================== */
+/* Layout y estilo de los proyectos destacados, sus miniaturas, tarjetas descriptivas y enlaces externos. */
 .featured-project {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
@@ -1475,6 +1486,7 @@ svg {
 /* ===========================
    CONTACT SECTION
    =========================== */
+/* Ajusta el layout y el estilo del bloque final de contacto, los botones de email y CV y los enlaces secundarios. */
 .contact-content {
     max-width: 600px;
     margin: 0 auto;
@@ -1528,6 +1540,7 @@ svg {
 /* ===========================
    FOOTER
    =========================== */
+/* Estilo del pie de página con firma y año */
 .footer {
     padding: 40px 0;
     text-align: center;
